@@ -37,7 +37,7 @@ export default function ScopetreeFooter() {
 
         {/* Contact Info */}
         <div className="st-footer-section" style={{marginRight:"-100px"}}>
-          <h4 className="heading">Contact Us</h4>
+          <h4 className="heading">Contact</h4>
           <p>Email: info@scopetree.com</p>
           <p>Phone: +91 1234567890</p>
           <p>Location: Chennai</p>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './page4.css'; // import CSS
-import ranjith from '../../assets/img_6327.PNG';
+import ranjith from '../../assets/img_6327.png';
 
 
 
