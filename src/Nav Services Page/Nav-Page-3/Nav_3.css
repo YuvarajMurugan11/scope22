@@ -1,0 +1,101 @@
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 30px;
+  background: linear-gradient(
+    180deg,
+    #27abfd 30%,
+    rgba(255, 255, 255, 0) 100%);
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Laptop wrapper */
+.laptop-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Laptops */
+.laptop {
+  width: 400px;
+  max-width: 100%;
+  opacity: 0;
+  margin-bottom: -150px;
+  transform: translateY(100px);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.laptop.slide-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Logos above laptops */
+.logo {
+  position: absolute;
+  top: -130px; /* controls how high above the laptop */
+  opacity: 0;
+  transition: opacity 1s ease;
+  /* border: red 2px solid; */
+  margin-left: -30px;
+  margin-top: 50px;
+}
+
+.logo-left {
+  width: 140px;
+}
+
+.logo-right {
+  width: 200px;
+}
+
+.logo.fade-in {
+  opacity: 1;
+}
+
+/* Arrows */
+.arrow-wrapper {
+  position: relative;
+  width: 300px;
+  height: auto;
+  margin-bottom: -110px;
+  margin-top: -10px;
+  margin-left: -110px;
+  margin-right: -100px;
+}
+
+.arrow-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.arrows {
+  position: relative;
+  width: 300px;
+  left: -200px;
+  opacity: 0;
+  z-index: 2;
+  transition: left 1s ease, opacity 1s ease;
+}
+
+.arrows.slide-in {
+  left: 0;
+  opacity: 1;
+}
+
+/* Bottom content */
+.nav_3-con {
+  height: 300px;
+  width: 840px;
+  margin-left: 290px;
+  padding: 10px 50px;
+}

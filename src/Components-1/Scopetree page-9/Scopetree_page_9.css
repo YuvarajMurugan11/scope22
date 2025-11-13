@@ -1,0 +1,76 @@
+.scopetree9-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 60px 0;
+  width: 100%;
+}
+
+.scopetree9-left {
+  position: relative;
+}
+
+.scopetree9-img {
+  width: 700px;
+  height: AUTO;
+  /* margin-left: -42px; */
+  /* box-shadow: 0 6px 20px rgb(37, 37, 37); */
+  /* margin-top: */
+    opacity: 1;
+  transform: translateY(0);
+  animation: float 2s ease-in-out infinite;
+}
+
+.scopetree9-right {
+  max-width: 420px;
+}
+
+.scopetree9-heading {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.scopetree9-link {
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0052cc;
+  text-decoration: none; /* remove default underline */
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* clean linear underline */
+.scopetree9-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /* keeps the line tight under text */
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #0052cc, #0052cc); /* solid linear line */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+/* show line on hover */
+.scopetree9-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* .scopetree9-link:hover {
+  text-decoration:underline;
+} */
+
+
+
+
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}

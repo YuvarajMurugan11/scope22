@@ -1,0 +1,173 @@
+/* ============= BASE SECTION ============= */
+.pb5-section {
+  width: 98%;
+  min-height: 75vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
+  height: 710px;
+  background-color: black;
+}
+
+.pb5-content {
+  width: 100%;
+  max-width: 1700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 800px;
+  justify-content: center;
+}
+
+/* ============= TITLE ============= */
+.pb5-title {
+  font-size: 3.2rem;
+  font-weight: 550;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 93%;
+  padding-left: 120px;
+  margin-top: -10px;
+  /* border: red 2px solid; */
+}
+
+/* ============= CARDS ============= */
+.pb5-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: -15px;
+}
+
+.pb5-card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pb5-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+  padding-left: 25px;
+}
+
+.pb5-dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 217, 0);
+  border-radius: 50%;
+  margin-top: 19px;
+  /* border: red 2px solid; */
+}
+
+.pb5-card {
+  width: 400px;
+  height: 250px;
+  background: linear-gradient(180deg,  rgb(255, 217, 0) 10%, rgba(0, 0, 0, 0.262) 120%);
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  /* border: red 2px solid; */
+}
+
+.pb5-text {
+  font-size: 0.99rem;
+  margin-top: 0px;
+  padding: 25px;
+  text-align: center;
+}
+
+.pb5-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ============= BOTTOM SECTION ============= */
+.pb5-bottom {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 1480px;
+  margin-top: 20px;
+}
+
+.pb5-desc {
+  color: #ccc;
+  max-width: 800px;
+  margin-left: 70px;
+}
+
+.pb5-button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 28px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 144px;
+  width: 360px;
+}
+
+.pb5-button:hover {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/* ============= RESPONSIVE ============= */
+@media (max-width: 1200px) {
+  .pb5-card {
+    width: 320px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .pb5-title {
+    font-size: 2.8rem;
+  }
+
+  .pb5-card {
+    width: 280px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pb5-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .pb5-card {
+    width: 100%;
+    max-width: 320px;
+    height: 180px;
+  }
+
+  .pb5-card-item {
+    align-items: center;
+  }
+
+  .pb5-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .pb5-desc {
+    max-width: 100%;
+  }
+
+  .pb5-button {
+    align-self: flex-start;
+  }
+}

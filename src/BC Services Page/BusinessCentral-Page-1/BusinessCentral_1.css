@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Main Container */
+.BusinessCentral_1__container {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  height: 780px;
+  color: white;
+  /* border: 2px solid red; */
+}
+
+/* Hero Section */
+.BusinessCentral_1__hero {
+  width: 100%;
+  height: 79vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #004960 30%,
+    rgba(0, 0, 0, 0.262) 120%
+  );
+}
+
+/* Content flex: membership box left, logo + text center */
+.BusinessCentral_1__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 600px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Membership Box */
+.BusinessCentral_1__membershipBox {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.123);
+  padding: 30px;
+  /* border-radius: 4px; */
+  max-width: 320px;
+  /* height: 160px; */
+  /* margin-left: -400px; */
+  /* margin-bottom: -250px; */
+  margin-left: -500px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* border: solid 2px red; */
+}
+
+.BusinessCentral_1__membershipTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #fff;
+  /* margin-top: -5px; */
+}
+
+.BusinessCentral_1__membershipText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.BusinessCentral_1__createButton {
+  background-color: rgb(1, 125, 248);
+  color: #fff;
+  border-radius: 0%;
+  padding: 10px 24px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  /* border: red 2px solid; */
+}
+
+.BusinessCentral_1__createButton:hover {
+  background-color: #333;
+}
+
+/* Logo + Text Section */
+.BusinessCentral_1__logoAndText {
+  display: flex;
+  align-items: center;
+  /* gap: 0px; space between logo and text */
+  /* border: solid 2px red; */
+  margin-right:-500px;
+}
+
+.BusinessCentral_1__logo {
+  width: 120px;
+  height: auto;
+  animation: floating 3s ease-in-out infinite;
+  /* border: solid 2px red; */
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(-5%) rotateX(0deg);
+  }
+  50% {
+    transform: translateY(5%) rotateX(10deg);
+  }
+}
+
+/* Text next to logo */
+.BusinessCentral_1__textLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.BusinessCentral_1__textLogo .BusinessCentral_1__heading1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.BusinessCentral_1__textLogo .BusinessCentral_1__heading2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 5px 0 0 0;
+}
+
+/* Description */
+.BusinessCentral_1__description {
+  padding: 20px 50px;
+  color: black;
+  text-align: justify;
+}
+
+.BusinessCentral_1__descriptionText {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.BusinessCentral_1__highlight {
+  font-weight: 400;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  .BusinessCentral_1__content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .BusinessCentral_1__membershipBox {
+    max-width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .BusinessCentral_1__logoAndText {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .BusinessCentral_1__textLogo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .BusinessCentral_1__heading1 {
+    font-size: 1.5rem;
+  }
+
+  .BusinessCentral_1__heading2 {
+    font-size: 2rem;
+  }
+
+  .BusinessCentral_1__membershipText {
+    font-size: 0.95rem;
+  }
+
+  .BusinessCentral_1__createButton {
+    font-size: 0.85rem;
+    padding: 8px 18px;
+  }
+}

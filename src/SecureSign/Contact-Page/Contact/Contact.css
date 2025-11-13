@@ -1,0 +1,726 @@
+
+/* ---------------------------------------------------- */
+/* --- START OF Contact.css (Your Original CSS) --- */
+/* ---------------------------------------------------- */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* * {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+} */
+/* Base for the form + container */
+.form-container {
+  max-width: auto;
+  /* padding: 40px; */
+  background: #ffffff;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
+  /* border-radius: 10px; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* margin: 40px auto; */
+  margin-top: -10PX;
+  margin-bottom: -70px;
+  height: 787px;
+  /* border: red 2px solid; */
+  margin-top: 30px;
+}
+
+/* Layout wrapper to hold left and right sections side-by-side */
+.contact-layout {
+  display: flex;
+  /* gap: 10px; */
+   /* border: red 2px solid; */
+   height: 787px;
+   /* height: 1000px; */
+}
+
+/* Left section (contact info + social) */
+.left-section {
+  /* flex: 1; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 32px;
+  /* border: red 2px solid; */
+  padding-left: 30px;
+  background: linear-gradient(to right, #035C75 10%, #ffffff);
+  /* height: ; */
+}
+
+.contact-container {
+  /* border: red 2px solid; */
+  padding: 30px;
+  max-width: 700px;
+  /* text-align: left; */
+  /* border-radius: 10px; */
+  font-family: sans-serif;
+
+}
+
+/* Right section (heading + form) */
+.right-section {
+  flex: 1.2;
+  margin-left: 12px;
+  /* border: red 2px solid; */
+  padding-top: 60px;
+}
+
+/* Info text paragraph under heading */
+.info-text {
+  /* font-size: 17px; */
+  margin-bottom: 30px;
+}
+
+/* Style the form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input groups */
+.input-group {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-group.horizontal {
+  /* This is the fixed margin causing potential overflow */
+  width: 350px;
+  margin-left: 100px;
+}
+
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+  text-align: left;
+}
+
+.required {
+  color: red;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.3s ease;
+  width: 100%;
+}
+
+input:focus,
+select:focus {
+  border-color: #0052cc;
+  outline: none;
+}
+
+input.error {
+  border-color: red;
+}
+
+.inline-error {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* Phone input container */
+.phone-input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.phone-input-container.error {
+  border-color: red;
+}
+
+/* The prefix (flag + code) */
+.phone-prefix {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  border-right: 1px solid #ccc;
+  width: 95px;
+  box-sizing: border-box;
+}
+
+.phone-prefix img {
+  width: 30px;
+  height: 21px;
+  object-fit: contain;
+  border-radius: 3px;
+  border: none;
+}
+
+.phone-prefix span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.phone-prefix .arrow {
+  font-size: 12px;
+  color: #555;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.phone-prefix .arrow.open {
+  transform: rotate(180deg);
+}
+
+.phone-input-only {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+
+.phone-input-container:focus-within {
+  border-color: #0052cc;
+}
+
+/* Dropdown for country codes */
+.country-dropdown {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.country-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.country-option img {
+  width: 20px;
+  height: 14px;
+  object-fit: contain;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+
+.country-option:hover {
+  background-color: #f0f0f0;
+}
+
+/* Radio buttons */
+.radio-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 390px;
+  margin-left: 90px;
+  /* border: red 2px solid; */
+  /* This is the fixed margin causing potential overflow */
+}
+
+.radio-row label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.radio-row input[type="radio"] {
+  margin-top: 0;
+}
+
+/* Submit button */
+.submit-btn {
+  background-color: #035C75;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  margin-left: 150px;
+  /* This is the fixed margin causing potential overflow */
+  padding-top: -10px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  width: fit-content;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  color: #035C75;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Shake animation for error feedback */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-5px);
+  }
+
+  40% {
+    transform: translateX(5px);
+  }
+
+  60% {
+    transform: translateX(-5px);
+  }
+
+  80% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+/* Other styles (outside the form) */
+
+.index-Contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  margin: -120px auto 0 auto;
+  width: 100%;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 38px;
+}
+
+.icon-circle {
+  background-color: #035C75;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 24px;
+}
+
+.icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.contact-text h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.contact-text p {
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.social-connect {
+  margin-left: 65px;
+}
+
+/* Social icons area */
+.social-connect h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: -8px;
+}
+
+.social-connect p {
+  color: #666;
+  text-align: left;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: -20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.social-icons a img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons img[alt="YouTube"] {
+  padding-top: 5px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .form-container {
+    padding: 30px;
+  }
+
+  .contact-layout {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-layout {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%; 
+  }
+
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .input-group {
+    width: 100%;
+  }
+
+  .radio-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+  }
+}
+
+/* ===== Custom Animated Radio Buttons ===== */
+.radio-row input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #035C75;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Inner circle animation */
+.radio-row input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #035C75;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.25s ease;
+}
+
+/* On checked */
+.radio-row input[type="radio"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Glow effect on hover */
+.radio-row input[type="radio"]:hover {
+  box-shadow: 0 0 0 4px rgba(3, 92, 117, 0.15);
+  transform: scale(1.1);
+}
+
+/* Smooth hover-out */
+.radio-row input[type="radio"]:not(:hover) {
+  transform: scale(1);
+}
+
+/* Label alignment fix */
+.radio-row label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.radio-row label:hover {
+  color: #035C75;
+}
+
+.vertical-line1 {
+  display: inline-block;
+  width: 1px;
+  height: auto;
+  margin-top: 30px;
+  background-color: #035C75;
+}
+
+/* Shake animation for invalid input */
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20%,
+  60% {
+    transform: translateX(-8px);
+  }
+
+  40%,
+  80% {
+    transform: translateX(8px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
+  border-color: #ff4d4d !important;
+}
+
+/* Popup overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 8px;
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  /* border: red 2px solid; */
+  /* width: 800px; */
+  /* padding-left: -10px; */
+
+}
+
+/* .popup-content h1 {
+  color: #035C75;
+  margin-bottom: 20px;
+  text-align: left;
+  animation: fadeScaleIn 0.6s ease forwards;
+  opacity: 0;
+  transform: scale(0.8);
+} */
+
+.popup-content p {
+  margin-top: 10px;
+  margin: 0.5rem 0;
+  font-size: 24px;
+  text-align: left;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+.resizable-textarea {
+  resize: vertical;
+  overflow: auto;
+  min-width: 350px;
+  max-width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* .left-container {
+  color: #035C75;
+} */
+
+/* .left-container h1 {
+  font-size: 40px;
+} */
+
+/* .left-container p {
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+} */
+
+/* -------------------------------------------------- */
+/* --- END OF Contact.css --- */
+/* -------------------------------------------------- */
+
+
+/* Ensure your existing overlay is at the top of the screen */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  /* border: red 2px solid; */
+  margin-left: -100px;
+}
+
+.processing-content {
+  /* Style for the Processing screen specifically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Spinner Animation CSS */
+.spinner {
+  border: 4px solid #f3f3f3;
+  /* Light grey */
+  border-top: 4px solid #035C75;
+  /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.inline-error {
+  color: #ff4d4f;
+  font-size: 13px;
+  margin-top: 4px;
+  transition: opacity 0.4s ease, max-height 0.4s ease, padding 0.4s ease;
+  overflow: hidden;
+  max-height: 50px; /* enough for 1 line of text */
+  opacity: 1;
+  padding: 2px 0;
+}
+
+/* Fade-out state */
+.inline-error.hidden {
+  opacity: 0;
+  max-height: 0;
+  padding: 0;
+}
+
+
+
+
+/* === Go Back Button (Non-intrusive styling) === */
+.go-back-btn {
+  background-color: white;
+  color: #035C75;
+  border: 2px solid #035C75;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  width: fit-content;
+}
+
+.go-back-btn:hover {
+  background-color: #035C75;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.go-back-btn:active {
+  transform: translateY(0);
+}

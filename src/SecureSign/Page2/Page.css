@@ -1,0 +1,106 @@
+/* Layout Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 4px;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Card Style */
+.card {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+  /* border-radius: 0px; */
+}
+
+/* Image area as background */
+.card-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease;
+}
+
+/* Content overlay */
+.card-content {
+  position: absolute;
+  inset: 0;
+  padding: 70px;
+  opacity: 0;
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+
+.card-content p {
+  text-align: justify;
+  line-height: 30PX;
+}
+
+/* Group A - Card 1 & 4 */
+.card.group-a .card-content {
+
+  background-color: #78788029;
+  /* DodgerBlue overlay */
+  color: black;
+}
+
+/* Group B - Card 2 & 3 */
+.card.group-b .card-content {
+  /* ForestGreen overlay */
+  /* background-color: #004b0c; */
+  background:linear-gradient(to bottom , #035C75 , #000000)
+  /* color: white; */
+
+}
+
+/* Titles for Group A (cards 1 & 4) */
+.card.group-a .card-content h2 {
+
+  color: black;
+}
+
+/* Titles for Group B (cards 2 & 3) */
+.card.group-b .card-content h2 {
+  color: white;
+}
+
+/* Titles for Group A (cards 1 & 4) */
+.card.group-a .card-content p {
+
+  color: black;
+}
+
+/* Titles for Group B (cards 2 & 3) */
+.card.group-b .card-content p {
+  color: white;
+
+
+}
+
+
+
+/* Hover animation */
+.card.slide-up:hover .card-image {
+  transform: translateY(-100%);
+}
+
+.card.slide-up:hover .card-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive tweaks (optional) */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}

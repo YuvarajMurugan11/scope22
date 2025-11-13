@@ -1,0 +1,149 @@
+.pb3-container {
+  min-height: 84vh;
+  display: flex;
+  width: 97.33%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding: 60px 20px;
+  position: relative;
+  background: linear-gradient(180deg, rgb(231, 182, 24) 10%, rgba(231, 183, 24, 0.41) 70%);
+}
+
+.pb3-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pb3-boxes {
+  position: relative;
+  width: 64%;
+  max-width: 1200px;
+  height: 300px;
+}
+
+.pb3-box {
+  position: absolute;
+  width: 20.33%;
+  height: 200px;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  min-width: 250px;
+  padding: 40px 30px;
+  border-radius: 5px;
+  text-align: center;
+background: linear-gradient(180deg, rgb(231, 182, 24) 10%, rgba(231, 183, 24, 0.41) 70%);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+  z-index: 1;
+  transition:
+    left 0.6s cubic-bezier(0.25, 1.5, 0.5, 1),
+    transform 0.6s cubic-bezier(0.25, 1.5, 0.5, 1),
+    opacity 0.4s ease,
+    box-shadow 0.6s ease;
+}
+
+.pb3-box.active {
+  transform: translateY(-50%) scale(1.25);
+  z-index: 3;
+  opacity: 1;
+background: linear-gradient(180deg, rgb(231, 182, 24) 10%, rgba(231, 183, 24, 0.41) 70%);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);
+}
+
+.pb3-box-title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  color: #333;
+  /* border: red 2px solid; */
+  margin-top: -19px;
+}
+
+.pb3-box-content {
+  font-size: 0.9rem;
+  line-height: 1.1;
+  color: #333;
+  margin-left: -10px;
+  width: 270px;
+  /* border: red 2px solid; */
+}
+
+/* Arrows */
+.pb3-arrows {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  color: #333;
+}
+
+.pb3-btn {
+  background: none;
+  border: none;
+  outline: none;
+  color: #222;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.pb3-btn:hover {
+  color: #0072ff;
+  transform: scale(1.15);
+}
+
+.pb3-btn:focus,
+.pb3-btn:active {
+  outline: none;
+  border: none;
+}
+
+.pb3-btn::-moz-focus-inner {
+  border: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pb3-boxes {
+    height: auto;
+  }
+
+  .pb3-box {
+    position: relative;
+    width: 48%;
+    margin-bottom: 25px;
+    left: 0 !important;
+    transform: scale(1) !important;
+    top: auto !important;
+  }
+
+  .pb3-box.active {
+    transform: scale(1.05) !important;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  .pb3-arrows {
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .pb3-btn {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pb3-box {
+    width: 100%;
+  }
+  .pb3-box.active {
+    transform: scale(1.03);
+  }
+}

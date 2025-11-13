@@ -1,0 +1,99 @@
+.powerbi2-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96.5vh;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+  overflow: hidden;
+}
+
+/* Left section - text content */
+.powerbi2-text-section {
+  width: 55%;
+  padding: 50px 60px;
+}
+
+.powerbi2-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(231, 182, 24);
+  margin-bottom: 20px;
+  width: 500px;
+  height: 200px;
+  margin-top: -30px;
+}
+
+.powerbi2-description {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.powerbi2-subheading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgb(231, 182, 24);
+  margin-bottom: 10px;
+}
+
+.powerbi2-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 1.1rem;
+}
+
+.powerbi2-list-item {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Right section - image */
+.powerbi2-image-section {
+  position: relative;
+  width: 30%;
+  height: 88%;
+  left: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: red 2px solid; */
+}
+
+.powerbi2-image-overlay {
+  position: absolute;
+  top: 0;
+  width: 99.1%;
+  height: 99.5%;
+  z-index: 0;
+  /* border: red 2px solid; */
+}
+
+.powerbi2-image-wrapper {
+  perspective: 1500px; /* enables 3D perspective */
+  /* border: red 2px solid; */
+}
+
+.powerbi2-image {
+  width: 95%;
+  z-index: 1;
+  margin-left: -50px;
+  margin-top: 125px;
+  object-fit: contain;
+  /* box-shadow: 0 6px 20px rgb(37, 37, 37); */
+  transform-style: preserve-3d;
+  animation: floating 5s ease-in-out infinite;
+  /* border: red 2px solid; */
+}
+
+/* Floating animation for image */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(-5%) rotateX(2deg) rotateY(2deg);
+  }
+  50% {
+    transform: translateY(0) rotateX(-2deg) rotateY(-2deg);
+  }
+}

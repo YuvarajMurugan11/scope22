@@ -1,0 +1,16 @@
+.About_Us_Page1 {
+  background-image:url(../../assets/About_US_Top.png) ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:450px;
+  width: 1509px;
+  display: flex;
+  justify-content: center;
+   margin-top: 60px;
+  align-items: center;
+  text-align: center;
+  /* border: 2px solid red; */
+}
+
+

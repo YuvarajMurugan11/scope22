@@ -1,0 +1,94 @@
+/* Background */
+/* .powerbi7-containerP {
+  background: linear-gradient(
+    180deg,
+    rgb(231, 182, 24) 10%,
+    rgba(231, 183, 24, 0.41) 70%
+  );
+} */
+
+/* Layout */
+.powerbi7-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 100px;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.powerbi7-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.powerbi7-image {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: contain;
+  margin-left: -40px;
+  margin-top: 0;
+  margin-bottom: -86px;
+}
+
+/* ✨ Smooth up–down floating animation */
+.floating {
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* move up */
+  }
+  100% {
+    transform: translateY(0); /* back down */
+  }
+}
+
+/* Right side content */
+.powerbi7-right {
+  flex: 1;
+}
+
+.powerbi7-title {
+  font-size: 2.4rem;
+  color: #1a1a1a;
+  margin-bottom: -100px;
+  font-weight: 700;
+  text-align: center;
+  height: 100px;
+}
+
+.powerbi7-description {
+  font-size: 1.5rem;
+  margin-top: 90px;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .powerbi7-container {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .powerbi7-left,
+  .powerbi7-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .powerbi7-image {
+    max-width: 350px;
+    margin: 0 auto 30px;
+  }
+}

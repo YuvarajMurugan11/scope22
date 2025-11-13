@@ -1,0 +1,141 @@
+.businesscentral4-container {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  padding: 30px 20px;
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+  background: linear-gradient(180deg, #011711 10%, #004960 70%);
+}
+
+.sales-title {
+  color: white;
+  text-align: center;
+  margin-bottom: 90px;
+  /* border: red 2px solid; */
+}
+
+.sales-title-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sales-boxes {
+  position: relative;
+  width: 64%;
+  max-width: 1200px;
+  height: 330px;
+  /* border: red 2px solid; */
+}
+
+.sales-box {
+  position: absolute;
+  width: 20.33%;
+  min-width: 250px;
+  height: 260px;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  padding: 25px 25px 25px 30px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #004960 20%, rgba(0, 0, 0, 0.45) 50%);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  opacity: 0.9;
+  transition:
+    left 0.6s cubic-bezier(0.25, 1.5, 0.5, 1),
+    transform 0.6s cubic-bezier(0.25, 1.5, 0.5, 1),
+    opacity 0.4s ease;
+    /* border: red 2px solid; */
+}
+
+.sales-box.active {
+  transform: translateY(-50%) scale(1.25);
+  background: linear-gradient(180deg, #011711 20%, #004960 60%);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);
+  opacity: 1;
+  z-index: 3;
+}
+
+.sales-box-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-left: -5px;
+  /* padding-left: -4px; */
+  text-align: center;
+   /* border: red 2px solid; */
+}
+
+.sales-box-content {
+  font-size: 0.8rem;
+  font-weight: 350;
+  line-height: 1.4rem;
+  color: #fff;
+  /* text-align: justify; */
+  /* margin-left: 9px; */
+   /* border: red 2px solid; */
+}
+
+.sales-point {
+  margin-bottom: 8px;
+  color: #e8e8e8;
+}
+
+/* Arrows */
+.arrow-container {
+  margin-top: 60px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+  outline: none; /* remove default focus border */
+}
+
+.arrow-btn:hover {
+  color: #00c6ff;
+  transform: scale(1.2);
+}
+
+.arrow-btn:focus {
+  outline: none; /* remove outline on click/focus */
+  box-shadow: none; /* remove any default browser shadows */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sales-boxes {
+    height: auto;
+  }
+
+  .sales-box {
+    position: relative;
+    width: 48%;
+    margin-bottom: 25px;
+    transform: scale(1) !important;
+  }
+
+  .sales-box.active {
+    transform: scale(1.05) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .sales-box {
+    width: 100%;
+  }
+  .sales-box.active {
+    transform: scale(1.03);
+  }
+}

@@ -1,0 +1,296 @@
+/* === MAIN CONTAINER === */
+.BC3-main {
+  font-family: 'Inter', sans-serif;
+  /* background: linear-gradient(180deg, #f9fafb 0%, #f3f4f6 100%); */
+  padding: 3rem 1rem;
+  min-height: 86vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 97%;
+  /* border: red 2px solid; */
+}
+
+/* === INNER WRAPPER === */
+.BC3-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* === HEADER SECTION === */
+.BC3-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.BC3-header h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  margin-top: -0px;
+}
+
+.BC3-header p {
+  font-size: 1.125rem;
+  color: #4b5563;
+}
+
+/* === TAB BAR - MODIFIED FOR GLIDER === */
+.BC3-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative; /* Essential for glider absolute positioning */
+  padding: 0.5rem; /* Added padding to contain the glider and buttons nicely */
+  background-color: #ffffff; /* Glider background color */
+  border-radius: 1rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05); /* Added subtle shadow */
+  /* border: 2px red solid; */
+  width: 1142px;
+}
+
+/* === GLIDER/SLIDER ELEMENT (NEW) === */
+.BC3-glider {
+    position: absolute;
+    top: 0.5rem; /* Matches the BC3-tabs padding-top */
+    height: 60px; /* Same height as the button */
+    background: #0fa1ac; 
+    /* Light background for the glider */
+   /* background: linear-gradient(to right, #359aa2 30%, rgba(255, 255, 255, 0) 100%); */
+    z-index: 1;
+    border-radius: 0.75rem;
+    transition: width 0.3s ease-out, transform 0.3s ease-out; /* Smooth animation */
+    /* Transform will be set inline in JSX (translateX) */
+    /* border: 2px red solid; */
+    margin-left: -982px;
+    
+}
+
+
+/* === TAB BUTTONS - MODIFIED === */
+.BC3-tab-btn {
+  border: none;
+  border-radius: 0.75rem;
+  background-color: transparent; /* Changed to transparent so glider is visible */
+  color: #374151;
+  font-weight: 600;
+  padding: 0.9rem 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  width: 177px;
+  height: 60px;
+  z-index: 2; /* Keep button on top of glider */
+  /* border: 2px red solid; */
+  
+}
+
+.BC3-tab-btn:hover {
+  color:white;
+  /* Removed: background: #f1f5ff; - Glider handles the background now */
+  transform: translateY(0); /* Removed the lift effect on hover to maintain position for the glider calculation */
+  /* border: 2px red solid; */
+}
+
+/* Active Button Text Color */
+.BC3-tab-btn.active {
+  color: white; 
+  /* Use a color that stands out on the light glider background */
+  /* Removed all background/box-shadow/after styles as the glider handles the visual active state */
+}
+
+/* Optional: To make the text *darker* when the glider moves under it (if you want an effect) */
+/* .BC3-tabs:hover .BC3-tab-btn,
+.BC3-tab-btn.active {
+    Optional: Keep the color change for visual feedback on hover/active
+    color: #1e3a8a;
+} */
+
+/* === CONTENT BOX === */
+.BC3-content {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
+  /* padding: 2.5rem; */
+  padding: 10px;
+  animation: fadeUp 0.8s ease-in-out;
+  width: 1138px;
+  height: 460px;
+  /* border: 2px red solid; */
+  margin-top: -19px;
+}
+
+/* === GRID SECTION === */
+.BC3-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* border: 2px red solid; */
+  /* margin-top: -10px; */
+}
+
+@media (min-width: 768px) {
+  .BC3-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* === IMAGE FRAME === */
+.BC3-img-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  /* border: 2px red solid; */
+}
+
+.BC3-img {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 6px 12px -1px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  /* border: 2px red solid; */
+  margin-top: 3px;
+  margin-left: -70px;
+}
+
+.BC3-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 20px rgba(37, 99, 235, 0.25);
+}
+
+.BC3-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* === TEXT AREA === */
+.BC3-text {
+  padding-left: 1rem;
+  margin-left: -50px;
+  margin-right: 15px;
+  /* border: 2px red solid; */
+}
+
+.BC3-subtitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  /* border: 2px red solid; */
+  margin-top: 49px;
+}
+
+/* === Underline animation for subtitle === */
+.BC3-subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg,#0fa1ac 60% , rgba(0, 0, 0, 0.448) 90%);
+  border-radius: 2px;
+  transition: width 0.3s ease-in-out;
+  /* border: 2px red solid; */
+}
+
+.BC3-subtitle:hover::after {
+  width: 100%;
+}
+
+/* === LIST ITEMS === */
+.BC3-li {
+  list-style: disc;
+  margin-left: -40px;
+  margin-bottom: 1rem;
+  line-height: 1.625;
+  color: #374151;
+  /* border: 2px red solid; */
+}
+
+.BC3-li-strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .BC3-content {
+    padding: 1.5rem;
+  }
+
+  .BC3-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .BC3-tab-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Adjust glider position on smaller screens */
+  .BC3-tabs {
+    padding: 0.5rem;
+  }
+  .BC3-glider {
+    top: 0.5rem; 
+  }
+}
+
+
+
+/* Only animate the text container when content changes */
+.BC3-text.slide-up {
+  animation: slideUp 0.6s ease forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+

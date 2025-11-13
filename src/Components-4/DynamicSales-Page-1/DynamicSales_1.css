@@ -1,0 +1,104 @@
+.DynamicSales_1__container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  width: 100%;
+  min-height: 780px;
+}
+
+/* Hero Section */
+.DynamicSales_1__hero {
+  position: relative;
+  width: 100%;
+  height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgb(0, 208, 255), white);
+  text-align: left;
+  overflow: hidden;
+}
+
+/* Content Section (Logo + Headings) */
+.DynamicSales_1__content {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* spacing between logo and text */
+  width: 80%;
+  margin-left: 900px;
+  max-width: 530px;
+  /* padding-left: 50px; */
+  z-index: 1;
+  /* border: red 2px solid; */
+}
+
+/* Logo Section */
+.DynamicSales_1__logoSection {
+  flex-shrink: 0;
+}
+
+.DynamicSales_1__logo {
+  width: 120px;
+  height: auto;
+  margin-right: -20px;
+  /* border: red 2px solid; */
+}
+
+/* Text Section */
+.DynamicSales_1__text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings */
+.DynamicSales_1__heading1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+}
+
+.DynamicSales_1__heading2 {
+  margin: 0;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* Description Section */
+.DynamicSales_1__description {
+  padding: 20px;
+  margin: 0 50px;
+  text-align: justify;
+  color: black;
+}
+
+.DynamicSales_1__descriptionText {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.DynamicSales_1__highlight {
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .DynamicSales_1__content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    gap: 15px;
+  }
+
+  .DynamicSales_1__heading1 {
+    font-size: 2.5rem;
+  }
+
+  .DynamicSales_1__heading2 {
+    font-size: 2rem;
+  }
+
+  .DynamicSales_1__logo {
+    width: 100px;
+  }
+}

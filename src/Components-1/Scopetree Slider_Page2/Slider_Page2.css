@@ -1,0 +1,147 @@
+.carousel-wrapper {
+  position: relative;
+  /* background-color: #0d0d20; */
+  background: linear-gradient(to top, #ffffff, #013547);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  height: 610px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    /* border: 2px solid red; */
+  overflow: hidden;
+}
+
+
+/* Title and description are static */
+.carousel-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  /* text-transform: uppercase; */
+  max-width: 900px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  margin-top: -100px;
+}
+
+.carousel-desc {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #ccc;
+  max-width: 850px;
+  margin-bottom: 35px;
+  /* text-align: justify; */
+}
+
+/* Subheading with fade-up */
+.carousel-subheading {
+  font-weight: 400;
+  font-size: 32px;
+  /* text-transform: uppercase; */
+  color: #dcdada;
+  margin-bottom: 15px;
+  letter-spacing: 2.5px;
+  position: static;
+  /* opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.8s ease forwards; */
+}
+
+/* Highlight with fade-up */
+.carousel-highlight {
+  font-size: 25px;
+  font-weight: 600;
+  color: #e5e5e5;
+  max-width: 900px;
+  margin: 25px auto 50px;
+  /* text-transform: uppercase; */
+  /* height: 20px; */
+  /* border: 2px solid red; */
+ letter-spacing: 0.5px;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Navigation Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 59%;
+  transform: translateY(-50%);
+  background: white;
+  color: #0d0d20;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-arrow.left {
+  left: 230px;
+}
+
+.carousel-arrow.right {
+  right: 230px;
+}
+
+/* Pagination dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.carousel_dot {
+  width: 20px;
+  height: 3px;
+  background-color: #555;
+  border-radius: 2px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.carousel_dot.active {
+  background-color: #2b79ff;
+}
+
+/* Fade-up animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-title {
+    font-size: 24px;
+  }
+  .carousel-desc {
+    font-size: 14px;
+  }
+  .carousel-highlight {
+    font-size: 22px;
+  }
+  .carousel-arrow.left {
+    left: 25px;
+  }
+  .carousel-arrow.right {
+    right: 25px;
+  }
+}

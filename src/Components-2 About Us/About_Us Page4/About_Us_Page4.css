@@ -1,0 +1,105 @@
+.AboutUs4Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 50px;
+  opacity: 0; 
+  transform: translateX(100px);
+  transition: all 1.2s ease;
+  overflow-x: hidden;
+}
+
+.AboutUs4Container.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Left side image */
+.AboutUs4Left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.AboutUs4MapImage {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Right side */
+.AboutUs4Right {
+  flex: 1;
+  margin-top: -40px;
+  margin-right: 10px;
+}
+
+.AboutUs4SubHeading {
+  font-size: 28px;
+  /* margin-bottom: 60px; */
+  margin-top: -4px;
+  margin-bottom: 40px;
+  color:  #065876;
+  text-transform: capitalize;
+}
+
+/* 3×2 layout */
+.AboutUs4IndustryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px 40px;
+  
+}
+
+/* Each bar */
+.AboutUs4IndustryBox {
+  position: relative;
+  background: #d9d9d9;
+  height: 60px;
+  /* border-radius: 6px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-right: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  /* border: 2px solid red; */
+}
+
+.AboutUs4IndustryBox:hover {
+  transform: translateY(-5px);
+}
+
+/* Text inside bar */
+.AboutUs4IndustryName {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Circular icon on right */
+.AboutUs4IndustryIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  position: relative;
+  top: -30px; /* ⬆ lifts the image upward */
+}
+
+/* Move Engineering & Construction image slightly right */
+.EngineeringIcon {
+  left: 40px; /* move to the right */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .AboutUs4Container {
+    flex-direction: column;
+  }
+  .AboutUs4IndustryGrid {
+    grid-template-columns: 1fr;
+  }
+}

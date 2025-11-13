@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.Nav_1__container {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  color: white;
+  height: 780px;
+  background-color: white;
+}
+
+/* Hero Section */
+.Nav_1__hero {
+  width: 100%;
+  height: 79vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Gradient background instead of image */
+  background: linear-gradient(to right, #2e8d44 30%, white 100%);
+  overflow: hidden;
+  /* border: #d5cfcf 2px solid; */
+}
+
+/* Content: horizontal flex */
+.Nav_1__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1500px;
+  max-width: 95%;
+  /* border: red 2px solid; */
+}
+
+/* Membership Box */
+.Nav_1__membershipBox {
+  color: black;
+  background-color: white;
+  padding: 30px;
+  /* border-radius: 4px; */
+  max-width: 320px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Nav_1__membershipTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.Nav_1__membershipText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.Nav_1__createButton {
+  background-color: black;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.Nav_1__createButton:hover {
+  background-color: #333;
+}
+
+/* Logo + Headings Section */
+.Nav_1__logoAndText {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* border: red 2px solid; */
+}
+
+.Nav_1__logo {
+  width: 120px;
+  height: auto;
+  /* margin-left: 10px; */
+  animation: floating 3s ease-in-out infinite;
+  /* border: red 2px solid; */
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(-5%) rotateX(0deg); }
+  50% { transform: translateY(5%) rotateX(10deg); }
+}
+
+.Nav_1__textLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -20px;
+}
+
+.Nav_1__heading1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+.Nav_1__heading2 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: white;
+  margin: 5px 0 0 0;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+/* Description */
+.Nav_1__description {
+  padding: 20px 50px;
+  color: black;
+  text-align: justify;
+}
+
+.Nav_1__descriptionText {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.Nav_1__highlight {
+  font-weight: 400;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  .Nav_1__content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .Nav_1__membershipBox {
+    text-align: center;
+  }
+
+  .Nav_1__logoAndText {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .Nav_1__heading1 { font-size: 1.5rem; }
+  .Nav_1__heading2 { font-size: 2rem; }
+  .Nav_1__membershipText { font-size: 0.95rem; }
+  .Nav_1__createButton { font-size: 0.85rem; padding: 8px 18px; }
+}

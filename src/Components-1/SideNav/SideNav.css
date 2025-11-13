@@ -1,0 +1,218 @@
+/* Side navigation container */
+.sideNavBar {
+  position: relative;
+  /* border: 2px solid red; */
+}
+
+/* Add background color or gradient to the full sidebar */
+.sideNav {
+  position: fixed;
+  right: 0;
+  width: 50px; /* adjust as needed */
+  height: 220px;
+  margin-right: 1px;
+  background: linear-gradient(to bottom, #dce6e9, #e3e7e8);
+  /* border-radius: 0 0 0 25px; optional rounded edge */
+  z-index: 998;
+  margin-top: 245px;
+
+}
+
+/* Each sidebar item */
+.sideNavBarItem {
+  font-size: 16px;
+  color: black;
+  background: transparent; /* remove item-level background */
+  transform: translateY(-50%);
+  padding: 10px 10px 10px 40px;
+  right: -190px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  z-index: 999;
+  margin-top: 230px;
+  margin-right: -20px;
+}
+
+/* Hover effect for items */
+.sideNavBarItem:hover {
+  right: 0px;
+  opacity: 1;
+  background: linear-gradient(to left, #91a0a3, #a3c6d1);
+  text-decoration: none;
+}
+
+/* Icon images */
+.sideNavBarItemIcon {
+  width: 40px;
+  height: 40px;
+  gap: none;
+  margin-left: -35px;
+  margin-right: 5px;
+  background: linear-gradient(to left, #91a0a3, #a3c6d1);
+  /* border: 2px solid red; */
+}
+
+/* Positions of each nav item */
+.sideNavBarItemArticle {
+  top: 50px;
+  width: 210px;
+  height: 30px;
+}
+
+.sideNavBarItemInterview {
+  top: 100px;
+  width: 210px;
+  height: 30px;
+}
+
+.sideNavBarItemScripter {
+  top: 150px;
+  width: 210px;
+  height: 30px;
+}
+
+.sideNavBarItemSuggested {
+  top: 200px;
+  width: 210px;
+  height: 30px;
+}
+
+/* Content container */
+.sideNavContent {
+  margin-left: 55px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes animateTop {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animateRight {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes animateBottom {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animateLeft {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* .animated-button12 {
+  width: 150px;
+  margin-right: -60px;
+  height: 40px;
+  border: none;
+  outline: none;
+  appearance: none;
+  background: linear-gradient(to left, #a5a5a5bc, #013547);
+  cursor: pointer;
+  padding: 13px 10px;
+  display: inline-block;
+  overflow: hidden;
+   font-size: 14px; */
+  /* letter-spacing: 2.5px; */
+  /* text-align: center; */
+  /* text-transform: uppercase; */
+  /* text-decoration: none;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  position: relative; */
+  /* background: linear-gradient(-30deg, #143640 50%, #035C75 50%); */
+/*  
+  border-radius: 0;
+} */
+
+.animated-button13::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.2s opacity ease-in-out;
+  z-index: 1;
+  background-color: #687f86;
+}
+
+.animated-button13:hover::before {
+  opacity: 0.2;
+}
+
+.animated-button13 span {
+  position: absolute;
+  z-index: 2;
+}
+
+.animated-button13 span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, rgba(43, 8, 26, 0), #00c8ff);
+  animation: 2s animateTop linear infinite;
+}
+
+.animated-button13 span:nth-child(2) {
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to top, rgba(43, 8, 26, 0), #00c8ff);
+  animation: 2s animateRight linear -1s infinite;
+}
+
+.animated-button13 span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, rgba(43, 8, 26, 0), #00c8ff);
+  animation: 2s animateBottom linear infinite;
+}
+
+.animated-button13 span:nth-child(4) {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(43, 8, 26, 0), #00c8ff);
+  animation: 2s animateLeft linear -1s infinite;
+}

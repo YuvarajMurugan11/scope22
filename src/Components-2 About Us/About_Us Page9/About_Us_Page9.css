@@ -1,0 +1,68 @@
+.About_Us_Page9_Wrapper {
+  width: 99%;
+  padding: 40px 0;
+  /* background: linear-gradient(to left, #a5a5a5bc, #013547); */
+   background:linear-gradient(to right, white, rgba(155, 153, 153, 0.462),white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   /* border: 2px solid red; */
+}
+
+.About_Us_Page9_Title {
+  font-size: 28px;
+  font-weight: 700;
+  color:  #065876;
+  margin-bottom: 30px;
+   /* border: 2px solid red; */
+}
+
+.About_Us_Page9_SliderWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+   /* border: 2px solid red; */
+}
+
+
+.About_Us_Page9_SliderTrack {
+  display: flex;
+  gap: 25px;
+  width: max-content;
+  animation: About_Us_Page9_Scroll 40s linear infinite;
+}
+
+/* 🔥 Stop scrolling when hovered */
+/* .About_Us_Page9_SliderWrapper:hover .About_Us_Page9_SliderTrack {
+  animation-play-state: paused;
+} */
+
+@keyframes About_Us_Page9_Scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.About_Us_Page9_Item {
+  min-width: 240px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  padding: 18px;
+  /* border-radius: 12px; */
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.About_Us_Page9_Icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+}
+
+.About_Us_Page9_Text {
+  font-size: 16px;
+  line-height: 18px;
+}

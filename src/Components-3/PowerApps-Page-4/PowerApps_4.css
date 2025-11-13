@@ -1,0 +1,120 @@
+/*
+  The main wrapper dictates the total scrollable height.
+  It needs to be taller than the viewport (100vh) to allow scrolling.
+  (numSections + 1) * 100vh creates enough scroll space for the animation.
+*/
+.scroll-container-wrapper {
+    position: relative;
+    /* Set a large height for the scroll container. 
+      E.g., 400vh for 3 content sections + 1 initial screen.
+      Adjust (numSections + 1) based on your content.
+    */
+    height: 400vh; /* (3 sections + 1 initial screen) * 100vh */ 
+    overflow: hidden; /* Important for clean edges */
+    background-color: #eeeaea; /* Match the video's dark background */
+}
+
+/* This fixed content area is what sticks to the top 
+  of the viewport while the outer wrapper scrolls.
+*/
+.scroll-fixed-content {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex; /* To lay out the image and content side-by-side */
+    overflow: hidden;
+}
+
+/* --- Left Panel: Image --- */
+
+.image-panel {
+    width: 50vw; /* Takes up half the screen */
+    height: 100%;
+    overflow: hidden;
+    /* Enable smooth transition for the transform */
+    transition: transform 0.1s ease-out; 
+    position: relative;
+}
+
+.full-cover-image {
+    height: 100%;
+    /* Keep width dynamic, set in JSX based on number of sections */
+    object-fit: cover; 
+    /* This ensures the image covers the 50vw panel on first load */
+    min-width: 100%; 
+    /* Initial state: position the first image slice to cover the 50vw panel */
+    transform: translateX(0); 
+}
+
+
+/* --- Right Panel: Content --- */
+
+.content-panel {
+    width: 50vw; /* Takes up half the screen */
+    height: 100%;
+    overflow: hidden; /* Crucial to hide the non-visible content sections */
+    position: relative;
+    padding: 10vh 5vw; /* Vertical and horizontal padding */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    color: #fff;
+}
+
+.intro-text {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #a0a0a0;
+}
+
+.content-slider {
+    display: flex;
+    height: auto; /* Allow sections to define height */
+    /* Transition for smooth sliding */
+    transition: transform 0.1s ease-out; 
+}
+
+.content-section {
+    min-width: 50vw; /* Each section is the width of the content panel */
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* .section-inner {
+    Styles for the text within the content section
+} */
+
+.content-section h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.join-link {
+    font-size: 1rem;
+    color: #9933ff; /* Purple color like the video */
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding-right: 20px;
+    position: relative;
+}
+
+.join-link::after {
+    content: '→'; /* Simple arrow */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}

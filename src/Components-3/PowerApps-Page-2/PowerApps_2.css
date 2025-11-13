@@ -1,0 +1,88 @@
+.powerapps2-container {
+    font-family: 'Segoe UI', sans-serif;
+    /* padding: 2rem; */
+    background-color: #fff;
+    /* border: red 2px solid; */
+    width: 99.99%;
+    height: 740px;
+}
+
+.powerapps2-header {
+    text-align: center;
+    color: #8d2e82;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    /* border: red 2px solid; */
+}
+
+.powerapps2-content {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* gap: 2rem; */
+    height: 658PX;
+    /* border: red 2px solid; */
+    margin-left:10px;
+}
+
+.powerapps2-text-section {
+    /* flex: 1; */
+    width: 590px;
+    height: 650px;
+    margin-left: 30PX;
+    /* margin-top: 10px; */
+    margin-right: -90px;
+    /* padding-top: 30px; */
+    /* border: red 2px solid; */
+}
+
+.powerapps2-title {
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: #8d2e82;
+    margin-top: -5px;
+    text-align: center;
+    /* margin-bottom:0.5rem; */
+    /* border: red 2px solid; */
+}
+
+.powerapps2-description {
+    color: #333;
+    line-height: 1.5;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-top: -4px;
+    /* border: red 2px solid; */
+}
+
+.powerapps2-chart-section {
+    /* flex: 1; */
+    background-color: #550c71;
+    /* padding: 2rem; */
+    /* border-radius: 8px; */
+    /* position: relative; */
+     /* border: red 2px solid; */
+     height: 560px;
+     width: 800px;
+     margin-left: 137px;
+}
+
+.recharts-tooltip-wrapper {
+    color: #fff;
+    /* height: 40px; */
+    /* width: 110px; */
+    font-size: 0.9rem;
+     /* border: red 2px solid; */
+}
+
+
+.recharts-tooltip-wrapper {
+    color: #fff;
+    font-size: 0.8rem;
+    height: 28px !important; /* Reduce tooltip height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

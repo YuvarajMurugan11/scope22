@@ -1,0 +1,268 @@
+/* Slider Wrapper */
+.slider-wrapper {
+  position: relative;
+}
+
+/* Slide Container */
+.slide-container {
+  height: 450px;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  color: rgb(0, 0, 0);
+  box-sizing: border-box;
+}
+
+/* Slide Content */
+.slide-content {
+  max-width: 500px;
+}
+
+.slide-content_heading {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide-content_Para {
+  font-size: 15px;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.slide-content_button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.learn-more-btn {
+  background-color: #0056b3;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+/* Gradients for slides */
+.slide1 {
+  background: linear-gradient(to right, #ffffff, #013547);
+}
+
+.slide2 {
+  background: linear-gradient(to right, #ffffff, #00434d);
+}
+
+.slide3 {
+  background: linear-gradient(to right, #ffffff, #0b313f);
+}
+
+/* Footer Controls */
+.custom-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1rem;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.control-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  width: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot1 {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  background-color: white;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dot1.active {
+  background-color: #000;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .slide-container {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .slide-content {
+    max-width: 100%;
+  }
+
+  .slide-content_heading {
+    font-size: 1.5rem;
+  }
+
+  .slide-content_Para {
+    font-size: 0.9rem;
+  }
+
+  .slide-content_button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .custom-controls {
+    gap: 0.75rem;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .control-button {
+    font-size: 1.2rem;
+  }
+
+  .dot1 {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Slide 1 right-side icons */
+.slide1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.slide-icons-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .slide1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .slide-icons-right {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Slide 2 Image Layout */
+.slide2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.slide-image-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide2-image {
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.slide2-image.animated {
+  animation: fadeUp 2s ease-out forwards, float 3s ease-in-out 2s infinite;
+}
+
+/* Slide 3 Images Layout */
+.slide3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.slide-images-right {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide3-image {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.slide3-image.animated {
+  animation: fadeUp 2s ease-out forwards, float 3s ease-in-out 2s infinite;
+}
+
+/* Fade Up and Float Animations */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Adjustments for Slide 3 */
+@media (max-width: 768px) {
+  .slide3 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .slide-images-right {
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+
+  .slide3-image {
+    width: 100px;
+    margin-bottom: 1rem;
+  }
+}

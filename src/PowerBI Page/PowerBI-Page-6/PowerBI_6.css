@@ -1,0 +1,133 @@
+/* === Base layout === */
+.pb6-section {
+  width: 99.99%;
+  height: 780px;
+  background-color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+  position: relative;
+  /* border: red 2px solid; */
+}
+
+.pb6-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 15px 8%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  height: 780px;
+}
+
+/* === Laptop image positioned on the right side === */
+.pb6-image-bg {
+  position: absolute;
+  top: 52%;
+  right: -4.5%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 1;
+}
+
+.pb6-laptop {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.95;
+  /* border: red 2px solid; */
+  margin-top: 120px;
+}
+
+/* === Text section above the image === */
+.pb6-content {
+  position: relative;
+  z-index: 2;
+  max-width: 70%;
+  margin-left: -130px;
+  margin-top: 35px;
+  /* border: red 2px solid; */
+}
+
+.pb6-title {
+  color: rgb(231, 182, 24);
+  font-size: 3.8rem;
+  font-weight: 600;
+  width: 1400px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+.pb6-subtitle {
+  color: #222;
+  width: 1400px;
+  font-size: 1.5rem;
+  margin-top: -1px;
+  margin-bottom: 50px;
+  margin-left: 2px;
+  line-height: 0.5;
+  font-weight: 400;
+  /* border: red 2px solid; */
+}
+
+/* === Gradient boxes aligned with laptop starting line === */
+.pb6-gradients {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.pb6-gradient-box {
+  width: 650px;
+  height: 60px;
+  border-radius: 12px;
+  background: linear-gradient(
+    to right,
+    rgb(231, 182, 24) 30%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  position: relative;
+}
+
+/* === Responsive adjustments === */
+@media (max-width: 1024px) {
+  .pb6-wrapper {
+    flex-direction: column;
+    padding: 60px 5%;
+  }
+
+  .pb6-image-bg {
+    position: relative;
+    width: 100%;
+    right: 0;
+    transform: none;
+    margin-top: 40px;
+
+  }
+
+  .pb6-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .pb6-gradients {
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .pb6-title {
+    font-size: 1.8rem;
+  }
+
+  .pb6-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .pb6-gradient-box {
+    width: 250px;
+    height: 50px;
+  }
+}

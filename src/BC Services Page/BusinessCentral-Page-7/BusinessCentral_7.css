@@ -1,0 +1,65 @@
+.BusinessCentral_7 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 per row */
+  gap: 25px;
+  padding: 40px;
+  padding-top: 80px;
+  background-color: #f8fafc;
+  padding-left: 110px;
+  /* border: red 2px solid; */
+  min-height: 700px; /* ensures container is at least this tall */
+  height: 600px; /* use this if you want a fixed height */
+}
+
+
+@media (max-width: 1024px) {
+  .BusinessCentral_7 {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on medium screens */
+  }
+}
+
+@media (max-width: 640px) {
+  .BusinessCentral_7 {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+}
+
+.BusinessCentral_7-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  transition: all 0.3s ease;
+  text-align: left;
+  width: 300px;
+  height: 200px;
+  /* border: red 2px solid; */
+}
+
+.BusinessCentral_7-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.BusinessCentral_7-icon {
+  width: 80px;
+  height: 80px;
+  /* margin-bottom: 20px; */
+  margin-left: -8px;
+  /* border: red 2px solid; */
+}
+
+.BusinessCentral_7-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 10px;
+  margin-top: -5px;
+  /* border: red 2px solid; */
+}
+
+.BusinessCentral_7-description {
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

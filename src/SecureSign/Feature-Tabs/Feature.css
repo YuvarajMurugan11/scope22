@@ -1,0 +1,325 @@
+.feature-container {
+  background-color: #001c4b;
+  margin-top: -18px;
+  height: 260px;
+  background-image: url(../../assets/feature1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 15px;
+  margin-left: 80px;
+  margin-right: 50px;
+  border-radius: 20px;
+}
+
+.feature-tabs {
+  position: relative;
+  display: flex;
+  background-color: #cfcfcf77;
+  border-radius: 25px;
+  padding: 0px 4px;
+  overflow: hidden;
+  width: 85%;
+  margin-left: 80px;
+  border: 2px solid rgba(255, 255, 255, 0.445);
+  justify-content: space-between;
+  margin-top: 15px;
+  height: auto;
+  padding-right: 20px;
+}
+
+.feature-tabs button {
+  position: relative;
+  z-index: 1;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+  color: rgba(245, 245, 245, 0.911);
+  transition: color 0.3s;
+}
+
+.feature-tabs button.feature-active {
+  color: white;
+}
+
+.feature-slider1 {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  text-align: center;
+  height: calc(100% - 7px);
+  background-color: #050505;
+  border-radius: 25px;
+  z-index: 0;
+  transition: all 0.3s ease;
+}
+
+.feature-card-box {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.feature-card1 {
+  height: 160px;
+  text-align: center;
+  margin-top: -12px;
+  background: rgba(0, 0, 0, 0.236);
+  border-radius: 10px;
+  width: 98%;
+  box-shadow: 5px 0px 5px 8px rgba(0, 0, 0, 0.073);
+  opacity: 0;
+  animation: feature-slideIn 0.7s forwards;
+}
+
+.feature-card1 hr {
+  height: 1.5px;
+  background-color: white;
+}
+
+@keyframes feature-slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-feat_p {
+  text-align: justify;
+  color: #f3f3f3;
+  font-size: 15px;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+feature-vertical-line {
+  display: inline-block;
+  width: 1px;
+  height: auto;
+  background-color: rgb(53, 51, 51);
+}
+
+/* =============================== */
+/* Animated gradient border container */
+.feature-icon-toggle-container {
+  position: fixed;
+  /* stick to viewport */
+  bottom: 280px;
+  /* distance from bottom */
+  right: 10px;
+  /* distance from right */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  /* padding: 5px; */
+  z-index: 1000;
+  gap: 10px;
+  overflow: visible;
+  width: 51px;
+  height: 114px;
+  padding-top: 2px;
+  padding-left: 1px;
+}
+
+/* Running gradient border */
+.feature-icon-toggle-container::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border-radius: 14px;
+  background: linear-gradient(270deg, #035C75, orange, gray, #035C75, orange, gray, #035C75, orange, gray);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: gradientMove 4s linear infinite;
+}
+
+/* Inner overlay */
+.feature-icon-toggle-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Icon styles */
+.feature-icon-box {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to bottom, #035C75, #000000);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.feature-icon-box:hover {
+  background-color: #ccdbd8;
+  color: black;
+}
+
+/* Popups */
+.feature-call-icon-wrapper {
+  position: relative;
+}
+
+.feature-popup-box1 {
+  position: absolute;
+  top: 105%;
+  left: -260px;
+  transform: translateY(-50%);
+  width: 320px;
+  z-index: 2000;
+  animation: feature-popupSlideFade 0.4s ease forwards;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.feature-popup-box1.show {
+  opacity: 1;
+}
+
+.feature-popup-content {
+  /* background-color: rgb(231, 10, 10); */
+  background: linear-gradient(to right, #ffffff 10%, #d9f8ff );
+  padding-top: 25px;
+  padding-left: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  height: 90px;
+  margin-top: -10px;
+  width: 250px;
+}
+
+.feature-popup-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+.feature-popup-icon {
+  color: #135d99;
+  font-size: 20px;
+}
+
+.feature-popup-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.feature-call-icon-wrapper:nth-child(1) .feature-popup-box1 {
+  width: 200px;
+  left: -140px;
+  height: 50px;
+  top: 65%;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes feature-popupSlideFade {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+}
+
+/* === Animated Gradient Border for Popup (Fully Visible 4-Sided) === */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: true;
+}
+
+:root {
+  --border-speed: 2500ms;
+  --angle: 0deg;
+
+  /* Bright visible colors for white background */
+  --border-c1: #035C75;
+  /* Blue */
+  --border-c2: white;
+  /* Purple */
+  --border-c3: orange;
+  /* Pink */
+}
+
+.feature-popup-border {
+  position: relative;
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Outer spinning gradient layer */
+.feature-popup-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  /* border thickness */
+  border-radius: 10px;
+  background: conic-gradient(from var(--angle),
+      var(--border-c1),
+      var(--border-c2),
+      var(--border-c3),
+      var(--border-c1));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: popupBorderRotate var(--border-speed) linear infinite;
+  z-index: -1;
+}
+
+@keyframes popupBorderRotate {
+  100% {
+    --angle: 360deg;
+  }
+}

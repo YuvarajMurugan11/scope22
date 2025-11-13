@@ -1,0 +1,147 @@
+.aboutUsPage7Container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #fff;
+  color: #065876;
+  gap: 20px;
+  padding: 0px 40px;
+  /* Start hidden and shifted left */
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Active animation class added via JS */
+.animateFadeInLeft {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Left Side - Stats Grid */
+.aboutUsPage7LeftSideBlue {
+  flex: 1 1 475px;
+  min-width: 300px;
+  color: #065876;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutUsPage7StatsGrid2x3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(40px, auto);
+  gap: 40px 20px;
+  margin-left: 40px;
+}
+
+.aboutUsPage7StatBlock {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.aboutUsPage7NumberWrapper {
+  width: 80px;
+  text-align: left;
+}
+
+.aboutUsPage7Number {
+  font-size: 40px;
+  font-weight: 500;
+  color: #065876;
+  flex-shrink: 0;
+}
+
+/* Label underline animation */
+.aboutUsPage7Label {
+   font-size: 16px;
+  font-weight: 400;
+  color: #065876;
+  text-align: left;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.aboutUsPage7Label::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+   /* background: linear-gradient(to right,#083880, #083880);  */
+   background-color: #065876;
+  transition: width 1s ease;
+}
+
+.aboutUsPage7Label.animate::after {
+  width: 100%;
+}
+
+/* Right Side - Image */
+.aboutUsPage7RightSide {
+  flex: 1 1 610px;
+  min-width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+ 
+  /* border: 2px solid red; */
+}
+
+.aboutUsPage7MapWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.aboutUsPage7MapImage {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .aboutUsPage7Container {
+    flex-direction: column;
+  }
+
+  .aboutUsPage7LeftSideBlue {
+    align-items: center;
+    text-align: center;
+  }
+
+  .aboutUsPage7StatsGrid2x3 {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-left: 0;
+  }
+
+  .aboutUsPage7StatBlock {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .aboutUsPage7NumberWrapper {
+    width: 70px;
+  }
+
+  .aboutUsPage7Number {
+    font-size: 32px;
+  }
+
+  .aboutUsPage7Label {
+    font-size: 16px;
+    padding-bottom: 3px;
+  }
+}

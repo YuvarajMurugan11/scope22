@@ -1,0 +1,56 @@
+.secure-sign-container {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  background:linear-gradient(to bottom , #035C75 , #000000);
+  /* Black background */
+  color: white;
+  padding: 40px 20px;
+  /* border: 2px solid red; */
+  height: 400px;
+  margin-top: 50px;
+}
+
+.image-section img {
+  width: 400px;
+  /* Adjust size as needed */
+  height: auto;
+ border: 2px sol/id red;
+
+  border-radius: 8px;
+  margin-left: 60px;
+  /* margin-bottom: -13px; */
+  margin-top: 5px;
+
+}
+
+.text-section {
+  /* padding-right: 30px; */
+ /* border: 2px solid red; */
+margin-left: 100px;
+
+}
+
+.text-section h2 {
+  color: white;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.text-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.text-section li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.page4_h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #035c75;
+  margin-bottom: 20px;
+}
+

@@ -1,0 +1,128 @@
+.nav5-section {
+  width: 99.99%;
+  height: 780px;
+  background-color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+  position: relative;
+  /* border: red 2px solid; */
+  margin-top: 50px;
+}
+
+.nav5-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 15px 8%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  height: 780px;
+}
+
+/* === Laptop image positioned on the right side === */
+.nav5-image-bg {
+  position: absolute;
+  top: 52%;
+  right: -4.5%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 1;
+}
+
+.nav5-laptop {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.95;
+  margin-top: 100PX;
+  margin-left: 410px;
+  /* border: red 2px solid; */
+}
+
+/* === Text section above the image === */
+.nav5-content {
+  position: relative;
+  z-index: 2;
+  max-width: 70%;
+  margin-left: -130px;
+  margin-top: 35px;
+}
+
+.nav5-title {
+  color: #27abfd;
+  font-size: 3rem;
+  font-weight: 700;
+  width: 1400px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+.nav5-subtitle {
+  color: #222;
+  width: 1400px;
+  font-size: 1.3rem;
+  margin-top: -1px;
+  margin-bottom: 50px;
+  margin-left: 2px;
+  line-height: 0.5;
+  font-weight: 400;
+}
+
+/* === Gradient boxes aligned with laptop starting line === */
+.nav5-gradients {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.nav5-gradient-box {
+  width: 650px;
+  height: 60px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #27abfd 30%, rgba(255, 255, 255, 0) 100%);
+  position: relative;
+}
+
+/* === Responsive adjustments === */
+@media (max-width: 1024px) {
+  .nav5-wrapper {
+    flex-direction: column;
+    padding: 60px 5%;
+  }
+
+  .nav5-image-bg {
+    position: relative;
+    width: 100%;
+    right: 0;
+    transform: none;
+    margin-top: 40px;
+    /* border: red 2px solid; */
+  }
+
+  .nav5-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .nav5-gradients {
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav5-title {
+    font-size: 1.8rem;
+  }
+
+  .nav5-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .nav5-gradient-box {
+    width: 250px;
+    height: 50px;
+  }
+}

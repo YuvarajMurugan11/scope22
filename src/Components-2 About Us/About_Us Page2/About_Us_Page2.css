@@ -1,0 +1,15 @@
+.About_Us_Page2 {
+  background-color: #fff;
+  color: #000;
+  padding: 40px;
+  /* border: 2px solid red; */
+}
+
+.about_text_P {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 98%;
+  text-align: justify;
+   /* border: 2px solid red; */
+   margin-left: 20px;
+}
