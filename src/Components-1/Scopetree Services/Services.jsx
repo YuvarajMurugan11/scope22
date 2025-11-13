@@ -1,11 +1,11 @@
 import React from "react";
 import "./Services.css";
-import MDBC from "../../assets/MDBC.PNG";
-import MDN from "../../assets/MDN.jpg";
-// import MDS from "../../assets/MDS.jpg";
-// import MDCRAM from "../../assets/MDCRAM.jpg";
-import MPBI from "../../assets/MPBI.jpg";
-import MDA from "../../assets/MDA.jpg";
+import MDBC from "../../assets/mdbc.PNG";
+import MDN from "../../assets/mdn.jpg";
+// import MDS from "../../assets/mds.jpg";
+// import MDCRAM from "../../assets/mdcram.jpg";
+import MPBI from "../../assets/mpbi.jpg";
+import MDA from "../../assets/mda.jpg";
 // import WD from "../../assets/WD.png";
 // import MAD from "../../assets/MAD.png";
 import { Link } from "react-router-dom"; // ✅ React Router link

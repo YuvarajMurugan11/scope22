@@ -39,12 +39,12 @@ const AboutUsPage5 = () => {
         <div className="aboutUsPage5Grid">
           <div className="aboutUsPage5TextBox">End to End Implementation</div>
           <div className="aboutUsPage5TextBox">Development & Customization</div>
-          <div className="aboutUsPage5TextBox">third Party Software Integration</div>
+          <div className="aboutUsPage5TextBox">Third Party Software Integration</div>
           <div className="aboutUsPage5TextBox">Data Migration & Upgrade</div>
           <div className="aboutUsPage5TextBox">Business Process Consulting</div>
           <div className="aboutUsPage5TextBox">Data Visualization</div>
           <div className="aboutUsPage5TextBox">Application Support and Maintenence</div>
-          <div className="aboutUsPage5TextBox">Automate Workflows</div>
+          <div className="aboutUsPage5TextBox">Automate <br />Workflows</div>
         </div>
       </div>
 

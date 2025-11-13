@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"; // ✅ React Router link
 import "./Scopetree_Navbar1.css";
-import logo from "../../assets/IMG_4911.png";
+import logo from "../../assets/img_4911.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function ScopetreeNavbar() {

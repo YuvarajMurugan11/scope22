@@ -2,7 +2,7 @@ import React from "react";
 import "./About_Us_Page9.css";
 
 // 🔥 Import your icon images manually here:
-import icon1 from "../../assets/ABMS_1.PNG";
+import icon1 from "../../assets/abms_1.PNG";
 import icon2 from "../../assets/ABMS_2.PNG";
 import icon3 from "../../assets//ABMS_3.PNG";
 import icon4 from "../../assets//ABMS_4.PNG";

@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Scopetree_Footer.css";
-import logo from "../../assets/IMG_4911.png";
+import logo from "../../assets/img_4911.png";
 
 export default function ScopetreeFooter() {
   return (

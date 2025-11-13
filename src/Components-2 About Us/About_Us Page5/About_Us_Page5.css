@@ -64,7 +64,7 @@
 
 .aboutUsPage5TextBox {
   background: linear-gradient(to top, #ffffff, #013547);
-  color: black;
+  color: rgb(235, 233, 233);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   display: flex;
   justify-content: center;
@@ -73,7 +73,7 @@
   font-size: 16px;
   text-align: center;
   cursor: pointer;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   transition: all 0.4s ease;
   transform: translateY(0);
 }
@@ -83,7 +83,7 @@
   transform: translateY(-10px) scale(1.05);
   background: linear-gradient(to bottom, #013547, #057ca1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-  color: black;
+  color: rgb(235, 233, 233);
 }
 /* ===== Responsive ===== */
 @media (max-width: 1200px) {
