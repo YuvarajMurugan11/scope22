@@ -23,7 +23,7 @@ const tabData = [
   },
   {
     id: 'supply',
-    title: 'Sales & Service Management',
+    title: 'Sales & Service',
     image: SSM,
     content: [
       { bold: 'Quote Generation', text: '– Allows users to create and manage sales quotes that can be easily converted into orders or invoices.' },
@@ -86,16 +86,12 @@ const ListItem = ({ bold, text }) => (
 
 const BusinessCentral_3 = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
   const [activeTab, setActiveTab] = useState(tabData[0].id);
   const [animateContent, setAnimateContent] = useState(false);
   const activeContent = tabData.find(tab => tab.id === activeTab);
-
   const [gliderStyle, setGliderStyle] = useState({ left: '0px', width: '0px' });
   const tabsRef = useRef([]);
   const tabsContainerRef = useRef(null);
@@ -113,7 +109,6 @@ const BusinessCentral_3 = () => {
   useEffect(() => {
     const initialIndex = tabData.findIndex(tab => tab.id === activeTab);
     setGliderPosition(initialIndex);
-
     const handleResize = () => setGliderPosition(tabData.findIndex(tab => tab.id === activeTab));
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -121,11 +116,10 @@ const BusinessCentral_3 = () => {
 
   const TabButton = ({ tab, index }) => {
     const isActive = tab.id === activeTab;
-
     const handleMouseEnter = () => {
-      if (!isActive) { // Only trigger animation if tab is changing
+      if (!isActive) {
         setAnimateContent(true);
-        setTimeout(() => setAnimateContent(false), 600);
+        setTimeout(() => setAnimateContent(false), 700);
         setActiveTab(tab.id);
         setGliderPosition(index);
       }
@@ -154,19 +148,14 @@ const BusinessCentral_3 = () => {
           <h1>Dynamics 365 Business Central – Core Capabilities</h1>
         </div>
 
-        <div 
-          className="BC3-tabs" 
-          ref={tabsContainerRef} 
-          onMouseLeave={handleMouseLeave}
-        >
-          <div 
-            className="BC3-glider" 
-            style={{ 
-              width: gliderStyle.width, 
-              transform: `translateX(${gliderStyle.left})` 
+        <div className="BC3-tabs" ref={tabsContainerRef} onMouseLeave={handleMouseLeave}>
+          <div
+            className="BC3-glider"
+            style={{
+              width: gliderStyle.width,
+              transform: `translateX(${gliderStyle.left})`
             }}
           ></div>
-
           {tabData.map((tab, index) => (
             <TabButton key={tab.id} tab={tab} index={index} />
           ))}
@@ -174,8 +163,8 @@ const BusinessCentral_3 = () => {
 
         <div className="BC3-content">
           <div className="BC3-grid">
-            {/* IMAGE: stays static, no animation */}
-            <div className="BC3-img-wrap">
+            {/* IMAGE with fade-up animation */}
+            <div className={`BC3-img-wrap ${animateContent ? 'fade-up' : ''}`}>
               <div className="BC3-img">
                 <img
                   src={activeContent.image}
@@ -188,8 +177,8 @@ const BusinessCentral_3 = () => {
               </div>
             </div>
 
-            {/* TEXT: animate only when content changes */}
-            <div className={`BC3-text ${animateContent ? 'slide-up' : ''}`}>
+            {/* TEXT with fade-up animation */}
+            <div className={`BC3-text ${animateContent ? 'fade-up' : ''}`}>
               <h2 className="BC3-subtitle">{activeContent.title}</h2>
               <ul>
                 {activeContent.content.map((item, index) => (

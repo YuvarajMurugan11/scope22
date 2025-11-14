@@ -77,7 +77,7 @@ const PowerBI_5 = () => {
 
 Power BI empowers businesses to convert raw data into meaningful insights, enabling smarter decisions and driving measurable growth across the organization.</h3>
             </p>
-            <button className="pb5-button">TARGET ACHIEVED ✓</button>
+            <button className="pb5-button">Contact Us</button>
           </div>
         </div>
       </section>

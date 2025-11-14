@@ -1,0 +1,39 @@
+.PowerBI_9-container {
+  background-color: #0066cc; /* Blue background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* Adjust based on design */
+  width: 100%;
+}
+
+.PowerBI_9-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.PowerBI_9-title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.PowerBI_9-button {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 10px 25px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.PowerBI_9-button:hover {
+  background-color: #ffffff;
+  color: #0066cc;
+}

@@ -34,7 +34,7 @@ const BusinessCentral_5 = () => {
           <div className="bc-cards" data-aos="fade-up">
             <div className="bc-card-item">
               <div className="bc-legend-item">
-                <span className="bc-dot" data-aos="fade-up"></span> <h3 data-aos="fade-up">Business Central Approval Workflows</h3>
+                <span className="bc-do " data-aos="fade-up"></span> <h3 data-aos="fade-up">Business Central Approval Workflows</h3>
               </div>
               <div className="bc-card"><p className='bc-p2' >
                 <p style={{marginTop:"0px",textAlign:"left"}}>Set up and customize approval workflows using built-in or preconfigured templates.</p> <br />
@@ -71,7 +71,7 @@ const BusinessCentral_5 = () => {
               <h3 >Workflows automate repetitive tasks, minimizing manual effort and speeding up processes. In Business Central,
                  you can create custom workflows and use tools like Job Queue to boost efficiency</h3>
             </p>
-            <button className="bc-button">TARGET ACHIEVED ✓</button>
+            <button className="bc-button">Contact Us</button>
           </div>
         </div>
       </section>

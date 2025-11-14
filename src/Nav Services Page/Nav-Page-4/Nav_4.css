@@ -3,32 +3,35 @@
   padding: 40px;
   font-family: "Segoe UI", sans-serif;
   overflow: hidden;
-  height: 680px;
+  height: 700px;
 }
 
 .nav_4-title {
   text-align: center;
   font-size: 30px;
   font-weight: 600;
+  margin-top: -20px;
+  margin-bottom: 20px;
   color: #1a3c6e;
-  margin-top: -10px;
 }
 
+/* ================= Main Timeline ================= */
 .nav_4-timeline {
   position: relative;
   width: 100%;
   height: 450px;
-  margin: auto;
-  margin-top: 50px;
+  margin: 50px auto;
 }
 
 .nav_4-line {
   position: absolute;
-  top: 50%;
+  top: 58%;
   left: 0;
   height: 4px;
   background-color: #0078d4;
   z-index: 1;
+  transition: width 0.2s ease;
+  /* border: red 2px solid; */
 }
 
 .nav_4-event {
@@ -81,68 +84,204 @@
   margin: auto;
 }
 
-/* Logos */
-.nav_4-logo {
-  display: block;
-  margin: auto;
-  max-width: 60px;
-  height: auto;
-  margin-bottom: 5px;
-}
+/* ================= Images ================= */
+.nav_4-image1 { display: block; margin-top: 8px; margin-left: 65px; max-width: 40px; }
+.nav_4-image2 { display: block; margin-top: -9px; margin-left: 20px; max-width: 140px; }
+.nav_4-image3 { display: block; margin-top: -150px; max-width: 170px; }
+.nav_4-image4 { display: block; margin-top: -190px; margin-left: 20px; max-width: 130px; }
 
-/* Boxes */
+/* ================= Boxes ================= */
 .nav_4-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
 }
 
 .nav_4-box {
-  background: linear-gradient(to right, #cbe5f3, #e5f2f8);
-  color: white;
-  border: red 2px solid;
-  border-radius: 8px;
-  font-weight: 600;
-  height: 300px;
-  font-size: 15px;
-  transform: translateY(-50px);
+  padding: 20px;
   opacity: 0;
-  transition: transform 0.7s ease, opacity 0.7s ease;
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+  text-align: center;
 }
 
-.nav_4-box.show-box {
+.show-box {
+  opacity: 1;
   transform: translateY(0);
+}
+
+.wide-box {
+  width: 1300px;
+  margin-top: -150px;
+}
+
+.version-box {
+  width: 1300px;
+  height: 350px;
+  /* background: #f8fcff; */
+  /* border-radius: 10px; */
+  position: relative;
+  overflow: hidden;
+  margin-top: -155px;
+  /* border: red 2px solid; */
+}
+
+/* ================= Version Timeline ================= */
+.version-timeline {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-top: -25px;
+  margin-left: -40px;
+  /* border: red 2px solid; */
+}
+
+.version-line {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  height: 4px;
+  background-color: #0078d4;
+  z-index: 1;
+  /* margin-top: 10px; */
+  /* border: red 2px solid; */
+}
+
+.version-event {
+  position: absolute;
+  top: 40%;
+  width: 150px;
+  text-align: center;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform-origin: center;
+  /* border: red 2px solid; */
+}
+
+.version-event.show {
   opacity: 1;
 }
 
-/* Box 1 timeline adjustments */
-.nav_4-in-box .nav_4-event {
-  width: 120px;
-  font-size: 11px;
+.version-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #0078d4;
+  border-radius: 50%;
+  margin: 0 auto;
+  z-index: 2;
 }
 
-.nav_4-in-box .nav_4-connector {
-  height: 25px !important;
+.version-connector {
+  width: 2px;
+  height: 40px;
+  background-color: #0078d4;
+  margin: 0 auto;
+  transition: height 0.5s ease;
+  /* border: red 2px solid; */
 }
 
-.nav_4-in-box .nav_4-event.nav_4-top {
-  transform: translateY(-30px) scale(1);
+.version-year {
+  font-weight: bold;
+  color: #004578;
 }
 
-.nav_4-in-box .nav_4-event.nav_4-bottom {
-  transform: translateY(30px) scale(1);
-}
-
-.nav_4-in-box .nav_4-year {
+.version-text {
   font-size: 12px;
-  margin-bottom: 2px;
+  color: #333;
+  margin-top: 3px;
+  
+  /* border: red 2px solid; */
 }
 
-.nav_4-in-box .nav_4-text {
-  font-size: 10px;
-  line-height: 12px;
+/* ================= Future Box ================= */
+.future-box-wrapper {
+  position: absolute;
+  height: 66%;
+  margin-top: 55px;
+  border: 2px dashed #0078d4;
+  background: rgba(173, 216, 230, 0.1);
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease, width 0.5s ease;
+  /* border: red 2px solid; */
 }
 
-.nav_4-in-box .nav_4-logo {
-  max-width: 30px;
-  margin-bottom: 2px;
+.future-box-wrapper.show {
+  opacity: 1;
+}
+
+.future-label {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  font-size: 14px;
+  color: #ff7700;
+  /* border: red 2px solid; */
+}
+
+
+/* ================= Responsive ================= */
+@media (max-width: 1400px) {
+  .nav_4-timeline, .nav_4-in-box {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .wide-box, .version-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav_4-bottom-row {
+    flex-direction: column;
+  }
+}
+
+
+/* ================= Version Timeline ================= */
+.version-timeline {
+  position: relative;
+  width: 95%;
+  height: 400px;
+  margin-top: -25px;
+  
+  /* border: red 2px solid; */
+}
+
+.version-line {
+  position: relative;
+  top: 50%;
+  height: 4px;
+  background-color: #0078d4;
+  z-index: 1;
+  transition: width 0.2s ease;
+  
+  /* border: red 2px solid; */
+}
+
+/* Labels above and below the line */
+.version-label-top {
+  position: absolute;
+  top: -25px;
+  left: 97%;
+  transform: translateX(-100%);
+  font-weight: 600;
+  color: #004578;
+  white-space: nowrap;
+  /* border: red 2px solid; */
+}
+
+.version-label-bottom {
+  position: absolute;
+  top: 8px;
+  margin-left: 9px;
+  left: 104.6%;
+  transform: translateX(-100%);
+  font-weight: 600;
+  color: #004578;
+  white-space: nowrap;
+  /* border: 2px solid red; */
 }

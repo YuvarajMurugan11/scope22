@@ -30,17 +30,17 @@ export default function ScopetreeFooter() {
           <ul>
             <li><Link to="/BC">Microsoft Dynamics 365 Business Central</Link></li>
             <li><Link to="/">Microsoft Dynamics NAV</Link></li>
-            <li><Link to="/PowerBI">Power BI</Link></li>
-            <li><Link to="/about">About</Link></li>
+            <li><Link to="/PowerBI">Microsoft PowerBI</Link></li>
+            <li><Link to="/about">Microsoft  PowerApps</Link></li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div className="st-footer-section" style={{marginRight:"-100px"}}>
           <h4 className="heading">Contact</h4>
-          <p>Email: info@scopetree.com</p>
-          <p>Phone: +91 1234567890</p>
-          <p>Location: Chennai</p>
+          <p>Email: sales@scopetree.com </p>
+          <p>Phone: +91 9445956284 </p>
+          {/* <p>Location: Chennai</p> */}
         </div>
       </div>
 

@@ -1,70 +1,90 @@
 .business-central-container {
-  display: flex;
-  /* justify-contexnt: space-between; */
+  /* display: flex; */
   align-items: center;
   background-size: cover;
-  background-position:center;
+  background-position: center;
   background-repeat: no-repeat;
   color: #ffffff;
   padding: 50px;
   font-family: "Segoe UI", sans-serif;
-  height: 600px;
+  height: 660px;
   width: 93.4%;
   /* border: red 2px solid; */
 }
+.bc2-h2{
+  color: #333;
+  margin-top: -30px;
+}
 
 .business-central-text {
-  /* font-size: 1.5rem;
-  margin-right: 40px; */
-  /* border: red 2px solid; */
-  height: 500px;
-  width: 600px;
-  /* padding: 20px; */
+  height: 200px;
+  width: 1300px;
   text-align: justify;
-  align-items: center;
-  /* padding-top: 100px; */
-  margin-top: 140px
+  /* align-items: center; */
+  margin-left: 50px;
+  /* margin-top: 80px; */
+  /* border: red 2px solid; */
 }
 
 .business-central-paragraph {
   margin: 0;
+  color: #555;
+  margin-top: 30px;
   /* border: red 2px solid; */
 }
 
-.business-central-logo{
-    /* border: red 2px solid; */
-    display: flex;
-    height: auto;
-    width: auto;
-    justify-content: center;
-    align-items: center;
+.business-central-logo {
+  display: flex;
+  height: auto;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  /* border: red 2px solid; */
 }
 
 .logo-icon {
-  width: 700px;
-  height: 350px;
-  margin-top: -10px;
-  margin-left: 110px;
-   /* border: red 2px solid; */
+  width: 900px;
+  height: 550px;
+  margin-top: -100px;
+  margin-left: 30px;
+  object-fit: contain;
+  transform-style: preserve-3d;
+  /* border: red 2px solid; */
+}
+
+/* ✅ Floating animation class */
+.floating {
+  animation: floating 5s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+/* Floating keyframes (same as PowerBI_2) */
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(-5%) rotateX(2deg) rotateY(2deg);
+  }
+  50% {
+    transform: translateY(0) rotateX(-2deg) rotateY(-2deg);
+  }
 }
 
 .logo-text {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-   /* border: red 2px solid; */
+  /* border: red 2px solid; */
 }
 
 .logo-subtitle {
   color: #d0d0d0;
   font-size: 1.9rem;
-   /* border: red 2px solid; */
+  /* border: red 2px solid; */
 }
 
 .logo-title {
   color: #ffffff;
   font-size: 2.9rem;
   font-weight: 380;
-   /* border: red 2px solid; */
-   margin-top: -22px;
+  margin-top: -22px;
+  /* border: red 2px solid; */
 }

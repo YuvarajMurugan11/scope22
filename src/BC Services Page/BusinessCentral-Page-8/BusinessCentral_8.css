@@ -1,0 +1,127 @@
+.BusinessCentral_8 {
+  /* background: url("https://images.unsplash.com/photo-1515169067865-5387ec356754?auto=format&fit=crop&w=1350&q=80")
+    center/cover no-repeat; */
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  min-height: 87vh;
+}
+.BusinessCentral_8 {
+  background-image: url(../../assets/bc8bg.png);
+  background-size: cover;       /* Cover the entire container */
+  background-position: center;  /* Center the image */
+  background-repeat: no-repeat; /* Avoid repeating */
+}
+
+
+.BusinessCentral_8::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.BusinessCentral_8 * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---- Header ---- */
+.BusinessCentral_8-header {
+  margin-bottom: 40px;
+}
+
+.BusinessCentral_8-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  margin-top: -10px;
+}
+
+.BusinessCentral_8-description {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  margin-top: -10px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f5f5f5;
+}
+
+/* ---- Grid ---- */
+.BusinessCentral_8-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: auto;
+  margin-top: 60px;
+  /* border: red 2px solid; */
+}
+
+/* ---- Card ---- */
+.BusinessCentral_8-card {
+  background-color: #0b4a4e8e;
+  padding: 25px;
+  border-radius: 6px;
+  height: 170px;
+  color: #fff;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* border: red 2px solid; */
+}
+
+.BusinessCentral_8-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Year Tag ---- */
+.BusinessCentral_8-year {
+  display: inline-block;
+  position: relative;
+}
+
+.BusinessCentral_8-yearText {
+  background-color: #08698f;
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 14px 6px 20px;
+  border-radius: 2px 0 0 2px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+/* ---- Card Text ---- */
+.BusinessCentral_8-text {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ---- Button ---- */
+.BusinessCentral_8-btnContainer {
+  margin-top: 50px;
+}
+
+.BusinessCentral_8-button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 12px 28px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.BusinessCentral_8-button:hover {
+  background: #fff;
+  color: #000;
+}

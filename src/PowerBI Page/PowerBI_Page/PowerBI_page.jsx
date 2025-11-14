@@ -9,6 +9,8 @@ import PowerBI_4 from '../PowerBI-Page-4/PowerBI_4'
 import PowerBI_5 from '../PowerBI-Page-5/PowerBI_5'
 import PowerBI_6 from '../PowerBI-Page-6/PowerBI_6'
 import PowerBI_7 from '../PowerBI-Page-7/PowerBI_7'
+import PowerBI_8 from '../PowerBI-Page-8/PowerBI_8'
+import PowerBI_9 from '../PowerBI-Page-9/PowerBI_9'
 
 
 const PowerBI_page = () => {
@@ -28,7 +30,9 @@ const PowerBI_page = () => {
       <PowerBI_3/>
       <div data-aos="fade-up"><PowerBI_4/></div>
       <PowerBI_5/>
+      <PowerBI_8/>
       <div data-aos="fade-up"><PowerBI_6/></div>
+      <PowerBI_9/>
    </>
   )
 }

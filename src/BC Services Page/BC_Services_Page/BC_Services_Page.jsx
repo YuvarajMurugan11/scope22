@@ -9,6 +9,8 @@ import BusinessCentral_4 from '../BusinessCentral-Page-4/BusinessCentral_4';
 import BusinessCentral_5 from '../BusinessCentral-Page-5/BusinessCentral_5';
 import BusinessCentral_6 from '../BusinessCentral-Page-6/BusinessCentral_6';
 import BusinessCentral_7 from '../BusinessCentral-Page-7/BusinessCentral_7';
+import BusinessCentral_8 from '../BusinessCentral-Page-8/BusinessCentral_8'
+import BusinessCentral_9 from '../BusinessCentral-Page-9/BusinessCentral_9'
 
 const Componets_Page1 = () => {
   useEffect(() => {
@@ -22,6 +24,7 @@ const Componets_Page1 = () => {
     <>
       <BusinessCentral_1 />
       <BusinessCentral_2 />
+      <BusinessCentral_8/>
       <BusinessCentral_3 />
       <BusinessCentral_4 />
       <BusinessCentral_5 />
@@ -31,6 +34,7 @@ const Componets_Page1 = () => {
       <div data-aos="fade-up">
         <BusinessCentral_6 />
       </div>
+       <BusinessCentral_9/>
     </>
   );
 };

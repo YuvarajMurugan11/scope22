@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./PowerBI_4.css";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const PowerBI_4 = () => {
+  const chartRef = useRef(null);
+  const isInView = useInView(chartRef, { once: true }); // Trigger only once
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
+
+  const barVariants = {
+    hidden: { height: 0, y: 300 },
+    visible: (i) => ({
+      height: i.height,
+      y: 300 - i.height,
+      transition: { duration: 1, ease: "easeOut", delay: i.delay },
+    }),
+  };
+
+  const data = [
+    { label: "Jan", value: 120, color: "#3b82f6", delay: 0 },
+    { label: "Feb", value: 180, color: "#ef4444", delay: 0.2 },
+    { label: "Mar", value: 150, color: "#60a5fa", delay: 0.4 },
+    { label: "Apr", value: 220, color: "#f59e0b", delay: 0.6 },
+    { label: "May", value: 260, color: "#10b981", delay: 0.8 },
+  ];
+
   return (
     <div className="PowerBI_4-container">
       {/* LEFT SIDE */}
@@ -40,18 +67,34 @@ const PowerBI_4 = () => {
               </p>
             </div>
           </li>
+          <li>
+            <span className="PowerBI_4-dot PowerBI_4-dot-purple"></span>
+            <div>
+              <strong>Power BI Gateway:</strong>
+              <p>
+                Enables secure data transfer between on-premises data sources
+                and the Power BI Service, ensuring reports stay up-to-date with
+                real-time information.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span className="PowerBI_4-dot PowerBI_4-dot-purple"></span>
+            <div>
+              <strong>Power BI Embedded:</strong>
+              <p>
+                Allows developers to integrate Power BI reports and dashboards
+                into custom applications, providing analytics capabilities
+                within other software.
+              </p>
+            </div>
+          </li>
         </ul>
-
-        <p className="PowerBI_4-text">
-          Lorem ipsum odor amet, consectetur adipiscing elit. Mollis parturient
-          justo; commodo ultrices fusce magnis nascetur. Dictum gravida elit
-          phasellus varius donec tempus.
-        </p>
       </div>
 
-      {/* RIGHT SIDE — Animated Chart */}
+      {/* RIGHT SIDE — Animated Bar Chart */}
       <div className="PowerBI_4-right">
-        <div className="PowerBI_4-chart-container">
+        <div className="PowerBI_4-chart-container" ref={chartRef}>
           <svg viewBox="0 0 550 350" className="PowerBI_4-svg">
             {/* --- GRID LINES --- */}
             {[50, 100, 150, 200, 250, 300].map((y, index) => (
@@ -73,47 +116,48 @@ const PowerBI_4 = () => {
             <line x1="40" y1="320" x2="520" y2="320" stroke="#555" strokeWidth="2" />
 
             {/* --- AXIS LABELS --- */}
-            <text x="25" y="325" fontSize="10" fill="#333">0</text>
-            <text x="15" y="260" fontSize="10" fill="#333">100</text>
-            <text x="15" y="200" fontSize="10" fill="#333">200</text>
-            <text x="15" y="140" fontSize="10" fill="#333">300</text>
-            <text x="15" y="80" fontSize="10" fill="#333">400</text>
+            <text x="25" y="325" fontSize="10" fill="#333">
+              0
+            </text>
+            <text x="15" y="260" fontSize="10" fill="#333">
+              100
+            </text>
+            <text x="15" y="200" fontSize="10" fill="#333">
+              200
+            </text>
+            <text x="15" y="140" fontSize="10" fill="#333">
+              300
+            </text>
+            <text x="15" y="80" fontSize="10" fill="#333">
+              400
+            </text>
+
+            {/* --- ANIMATED BARS --- */}
+            {data.map((bar, index) => (
+              <motion.rect
+                key={index}
+                x={80 + index * 80}
+                width="40"
+                fill={bar.color}
+                custom={{ height: bar.value, delay: bar.delay }}
+                variants={barVariants}
+                initial="hidden"
+                animate={controls}
+              />
+            ))}
 
             {/* --- X Axis Labels --- */}
-            <text x="80" y="340" fontSize="12" fill="#333">Jan</text>
-            <text x="160" y="340" fontSize="12" fill="#333">Feb</text>
-            <text x="240" y="340" fontSize="12" fill="#333">Mar</text>
-            <text x="320" y="340" fontSize="12" fill="#333">Apr</text>
-            <text x="400" y="340" fontSize="12" fill="#333">May</text>
-
-            {/* --- ANIMATED LINES --- */}
-            <motion.path
-              d="M40 300 L120 240 L200 250 L280 180 L360 160 L440 100"
-              fill="none"
-              stroke="#3b82f6"
-              strokeWidth="3"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 2, ease: "easeInOut" }}
-            />
-            <motion.path
-              d="M40 320 L120 260 L200 200 L280 220 L360 180 L440 150"
-              fill="none"
-              stroke="#ef4444"
-              strokeWidth="3"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 2.3, ease: "easeInOut", delay: 0.3 }}
-            />
-            <motion.path
-              d="M40 310 L120 280 L200 250 L280 260 L360 200 L440 120"
-              fill="none"
-              stroke="#60a5fa"
-              strokeWidth="3"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 2.5, ease: "easeInOut", delay: 0.5 }}
-            />
+            {data.map((bar, index) => (
+              <text
+                key={index}
+                x={90 + index * 80}
+                y="340"
+                fontSize="12"
+                fill="#333"
+              >
+                {bar.label}
+              </text>
+            ))}
           </svg>
         </div>
       </div>

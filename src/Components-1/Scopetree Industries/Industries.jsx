@@ -15,42 +15,42 @@ const industries = [
     description:
       "Drive efficiency and innovation with digital manufacturing solutions that connect production, inventory, and supply chain processes. Empower your operations with real-time insights and intelligent automation. ",
     image: IMF,
-    link: "/manufacturing",
+    // link: "/manufacturing",
   },
   {
     title: "Engineering & Construction",
     description:
       "Transform project delivery with digital tools that enhance planning, resource management, and collaboration. From design to execution, gain visibility and control to deliver projects on time and within budget.",
     image: IEC,
-    link: "/engineering-construction",
+    // link: "/engineering-construction",
   },
   {
     title: "Retail ",
     description:
       "Reimagine customer experiences through connected retail solutions. Streamline inventory, sales, and analytics to create personalized shopping experiences and smarter business operations.",
     image: IR,
-    link: "/retail",
+    // link: "/retail",
   },
   {
     title: "Education",
     description:
       "Enable a smarter learning ecosystem through digital transformation. Simplify administration, enhance collaboration, and empower institutions to deliver engaging, data-driven learning experiences.",
     image: IHC,
-    link: "/education",
+    // link: "/education",
   },
   {
     title: "Logistics",
     description:
       "Optimize your logistics network with real-time tracking, automated workflows, and data-driven insights. Deliver operational excellence, improve supply chain visibility, and boost customer satisfaction.",
     image: ILO,
-    link: "/logistics",
+    // link: "/logistics",
   },
   {
     title: "Financial Services",
     description:
       "Enhance financial performance and compliance with intelligent digital solutions. Streamline processes, gain actionable insights, and deliver secure, seamless experiences across all financial operations.",
     image: IFC,
-    link: "/financial-services",
+    // link: "/financial-services",
   },
 ];
 

@@ -1,6 +1,6 @@
 /* ============= BASE SECTION ============= */
 .bc-section {
-  width:98%;
+  width:97.9%;
   /* max-width: 1700px; */
   min-height: 75vh;
   /* background-size: cover; */
@@ -88,7 +88,8 @@
   background-color: #004960;
   border-radius: 50%;
   /* border: 2px red solid; */
-  margin-top: 19px;
+  /* margin-top: 10px; */
+  text-align: left;
 }
 
 /* green boxes - solid gradient */
@@ -187,14 +188,14 @@
   /* border: red 2px solid; */
   margin-left: 144px;
   /* margin-top: 60px; */
-  width: 360px;
+  width: 260px;
   /* border: none; */
 }
 
 .bc-button:hover {
-  background-color: #000;
-  color: #fff;
-  border: 2px solid #fff;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
 }
 
 /* ============= RESPONSIVE ============= */

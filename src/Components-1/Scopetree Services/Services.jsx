@@ -40,7 +40,7 @@ const technologies = [
   //   link: "https://www.microsoft.com/en-in/",
   // },
   {
-    title: "Power BI",
+    title: "Microsoft  PowerBI",
     description:
       "Transform your data into actionable insights with powerful, interactive dashboards and analytics.",
     image: MPBI,
